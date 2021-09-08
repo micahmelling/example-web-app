@@ -1,5 +1,4 @@
 import joblib
-from model.model import FakeModel
 
 from flask import Flask, request
 
@@ -30,7 +29,7 @@ def predict():
     """
     Endpoint to make predictions
     """
-    model = joblib.load('model/model.pkl')
+    model = joblib.load('modeling/model.pkl')
     input_data = request.json
     input_df = convert_json_to_dataframe(input_data)
     prediction = make_prediction(input_df, model)
