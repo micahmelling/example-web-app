@@ -1,0 +1,6 @@
+[
+  {
+    "name": "image-name",
+    "imageUri": "insert-ecr-uri:latest"
+  }
+]

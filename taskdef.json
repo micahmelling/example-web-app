@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "role-arn",
+    "containerDefinitions": [
+        {
+            "name": "name",
+            "image": "insert_ecr_uri:latest",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 8000,
+                    "protocol": "tcp",
+                    "containerPort": 8000
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "name"
+}
